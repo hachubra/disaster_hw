@@ -90,6 +90,7 @@ terraform apply
 
 chmod 700 /root/.ssh
 
+ansible-playbook -i hosts.ini
 
 
 

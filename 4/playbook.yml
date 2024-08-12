@@ -1,0 +1,14 @@
+---
+- hosts: vms
+  remote_user: user1
+  become: yes
+  #become_method: sudo
+  tasks:
+    - name: install EPEL repo
+      yum: name=epel-release state=present
+    - yum:
+        name: nginx 
+    - service:
+        name: nginx
+        state: started
+        
